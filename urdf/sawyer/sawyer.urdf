@@ -1,0 +1,580 @@
+<?xml version="1.0" ?>
+<!-- This URDF was generated from an XML file in the MuJoCo Menagerie project. -->
+<robot name="sawyer">
+   <link name="world">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.0"/>
+         <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="base">
+      <inertial>
+         <origin xyz="-0.0006241 -2.8025e-05 0.065404" rpy="2.0966240176227013 -1.5446852439979415 1.6727545215952664"/>
+         <mass value="2.0687"/>
+         <inertia ixx="0.007403514437746956" iyy="0.006817764082187018" izz="0.006729421480066023" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="base_0">
+         <origin xyz="-0.07485773038453818 -1.4788940440041032e-06 0.04059053410859696" rpy="1.5708541900280864 0.026257046644645676 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/base_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="base_1">
+         <origin xyz="0.0020945482658897025 -3.32281587459469e-07 0.03289723492445524" rpy="1.570238277436959 -1.5671501980061346 0.000851027818533634"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/base_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="world2base_fixed_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="world2base_fixed">
+      <parent link="world"/>
+      <child link="world2base_fixed_jointbody"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="world2base_fixed_offset">
+      <parent link="world2base_fixed_jointbody"/>
+      <child link="base"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="right_l0">
+      <inertial>
+         <origin xyz="0.0243645 0.0109688 0.143631" rpy="-0.13133110058370756 -0.3174680573065989 0.8850977258495182"/>
+         <mass value="5.3213"/>
+         <inertia ixx="0.0651599" iyy="0.0510954" izz="0.0186221" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="l0_0">
+         <origin xyz="-0.04164199352418094 0.015453800200840008 0.21742893221618526" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l0_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l0_1">
+         <origin xyz="0.04999122326049387 -0.07890910530691837 0.1738688504433166" rpy="2.0348274222296934 -0.07222930884816026 1.7140040133004815"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l0_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l0_2">
+         <origin xyz="0.02497101403435015 -0.005032683032853224 0.17073992075516997" rpy="0.24989741417496714 0.08614867683618543 1.6542565146360713"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l0_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l0_3">
+         <origin xyz="-0.0643166479572164 -0.01801265991015249 0.055162611799958995" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l0_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l0_4">
+         <origin xyz="-0.0659443208401541 0.018639574019617484 0.04154329004863325" rpy="2.3351355786332677 0.16839535208555878 -0.17306376101028764"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l0_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l0_5">
+         <origin xyz="0.008936454529190249 0.009335929702359178 0.07952546703282334" rpy="0.23417302987688648 0.08977927254576512 1.8859883383432283"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l0_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l0_6">
+         <origin xyz="0.043999512158113596 -0.030974230574902374 0.19747491799901407" rpy="0.7167026138475658 0.1152464468203489 1.2256502850286561"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l0_6.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="right_j0_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="right_j0">
+      <parent link="base"/>
+      <child link="right_j0_jointbody"/>
+      <origin xyz="0.0 0.0 0.08" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.0503" upper="3.0503" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="right_j0_offset">
+      <parent link="right_j0_jointbody"/>
+      <child link="right_l0"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="head">
+      <inertial>
+         <origin xyz="0.00532226 -2.65473e-05 0.1021" rpy="0.00014618645745634882 -0.007196167729855318 -0.0012530685974483627"/>
+         <mass value="1.5795"/>
+         <inertia ixx="0.0118334" iyy="0.00827097" izz="0.00496582" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="head_0">
+         <origin xyz="3.682423893633742e-08 3.69716831649628e-08 0.001067510501900253" rpy="2.148860399257298 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/head_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="head_2">
+         <origin xyz="0.006682465088726567 0.018973087333817796 0.0582450552742286" rpy="0.3087865138043744 0.13006646570064384 0.022666550266990326"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/head_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="head_3">
+         <origin xyz="0.012140715871921521 -0.0018325537311361243 0.09827320531437357" rpy="-0.08165158196941677 -0.002723848330866252 -0.007740836179383634"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/head_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="head_5">
+         <origin xyz="-0.007736013648253124 -3.1440943453800525e-06 0.10534539055628866" rpy="0.00011902702550238767 -0.035712498086502675 0.0004402032038113232"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/head_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="head_6">
+         <origin xyz="0.01654263860388312 2.3454673242876027e-06 0.14433150598177777" rpy="0.0002468613207823517 -0.13380105079361404 2.723279484731527e-05"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/head_6.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="head_7">
+         <origin xyz="0.027962526674657782 1.1137315672321589e-05 0.1012677301526406" rpy="1.5708321948215898 6.074206454931286e-05 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/head_7.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="head_8">
+         <origin xyz="0.006564077138263943 6.432920939198337e-06 0.0385273021817624" rpy="-0.0003680672001155227 0.11396919287580753 2.5699434839700582e-05"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/head_8.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="head_9">
+         <origin xyz="0.028526650868190364 -0.04999542034623769 0.10812741748734067" rpy="-0.7216590928658227 -0.0004369982418657159 0.00038456171094547464"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/head_9.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="right_l02head_fixed_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="right_l02head_fixed">
+      <parent link="right_l0"/>
+      <child link="right_l02head_fixed_jointbody"/>
+      <origin xyz="0.0 0.0 0.2965" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="right_l02head_fixed_offset">
+      <parent link="right_l02head_fixed_jointbody"/>
+      <child link="head"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="right_l1">
+      <inertial>
+         <origin xyz="-0.0030849 -0.026811 0.092521" rpy="2.275215178186543 0.25699952051523534 0.17525920209241752"/>
+         <mass value="4.505"/>
+         <inertia ixx="0.0224339" iyy="0.0221624" izz="0.00970971" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="l1_0">
+         <origin xyz="-7.629238254089535e-06 0.016234005583053584 0.15072041735427763" rpy="-0.00011367945063489593 -0.9722858547082343 1.571124063974744"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l1_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l1_1">
+         <origin xyz="-4.43940770764623e-06 -0.020526037407808104 0.09934994047032653" rpy="-0.00019799171264467397 -0.8262700532935116 1.571391890763317"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l1_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l1_2">
+         <origin xyz="-3.616204882397982e-07 -0.06005931262266374 0.07451559011279006" rpy="-1.5457235231330912e-05 -0.7550147895748869 1.5708291068779803"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l1_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="right_j1_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="right_j1">
+      <parent link="right_l0"/>
+      <child link="right_j1_jointbody"/>
+      <origin xyz="0.081 0.05 0.237" rpy="-1.5707963267948966 1.5707963267948966 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.8095" upper="2.2736" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="right_j1_offset">
+      <parent link="right_j1_jointbody"/>
+      <child link="right_l1"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="right_l2">
+      <inertial>
+         <origin xyz="-0.00016044 -0.014967 0.13582" rpy="-0.0018053149969833315 0.1473141557676434 1.5631558862723902"/>
+         <mass value="1.745"/>
+         <inertia ixx="0.0257928" iyy="0.025506" izz="0.00292516" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="l2_0">
+         <origin xyz="0.0002053947932352764 0.011755594397812952 0.23551560147255615" rpy="1.5707494480565514 -0.4008354067327391 1.5707853611252725"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l2_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l2_1">
+         <origin xyz="-0.00020235597198791006 0.011688808724798811 0.23461542284025566" rpy="1.5900112284440715 -0.3970913199245394 1.5712724858092024"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l2_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l2_2">
+         <origin xyz="2.1128652290974033e-09 -0.00926026812846995 0.05906962887600045" rpy="0.0 -0.16037065712477383 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l2_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l2_3">
+         <origin xyz="-1.6804507183195692e-06 0.015807842840417547 0.25848978975558384" rpy="0.00019628529327320177 -0.34995141669984786 1.570815780103263"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l2_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l2_4">
+         <origin xyz="1.8811220755678022e-06 -0.0024170365151022564 0.13505710439443222" rpy="5.2832261698609884e-05 -0.1032802288928274 1.5698667686775332"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l2_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="right_j2_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="right_j2">
+      <parent link="right_l1"/>
+      <child link="right_j2_jointbody"/>
+      <origin xyz="0.0 -0.14 0.1425" rpy="1.5707963267948963 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.0426" upper="3.0426" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="right_j2_offset">
+      <parent link="right_j2_jointbody"/>
+      <child link="right_l2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="right_l3">
+      <inertial>
+         <origin xyz="-0.0048135 -0.0281 -0.084154" rpy="0.7698472334650037 -0.2929441617431192 0.24902062906537742"/>
+         <mass value="2.5097"/>
+         <inertia ixx="0.0102404" iyy="0.0096997" izz="0.00369622" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="l3_0">
+         <origin xyz="0.0008621378766457069 0.047233347098336806 -0.0676561840267481" rpy="1.5707963267948966 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l3_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l3_1">
+         <origin xyz="-8.467022598740745e-06 -0.02452612854828968 -0.08430894921876673" rpy="-7.337239874349866e-05 0.737621164792575 1.571027082827133"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l3_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l3_2">
+         <origin xyz="-1.0522006995284562e-06 -0.05722404459640681 -0.06923932409747151" rpy="-7.71748562733432e-05 0.7530812389763706 1.5706799618457956"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l3_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l3_3">
+         <origin xyz="1.5243055772133822e-06 0.014440644974377873 -0.13098832785991263" rpy="-3.1415480879974718 -0.8308817939457513 -1.5707298662458564"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l3_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="right_j3_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="right_j3">
+      <parent link="right_l2"/>
+      <child link="right_j3_jointbody"/>
+      <origin xyz="0.0 -0.042 0.26" rpy="-1.5707963267948957 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.0439" upper="3.0439" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="right_j3_offset">
+      <parent link="right_j3_jointbody"/>
+      <child link="right_l3"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="right_l4">
+      <inertial>
+         <origin xyz="-0.00188917 0.00689948 0.134095" rpy="0.014791863518123338 -0.08516483303800126 1.272986152019925"/>
+         <mass value="1.1136"/>
+         <inertia ixx="0.0136555" iyy="0.0135498" izz="0.00127385" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="l4_0">
+         <origin xyz="-0.041137478096634164 -0.00046405246627281746 0.07782932352493376" rpy="0.015433604102720313 0.0025919183152938174 4.000577279088258e-05"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l4_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l4_1">
+         <origin xyz="-0.03857009455853102 0.003662146156260295 0.08737674619590821" rpy="-0.19063477011897084 0.02635334407690615 -0.20398040608351425"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l4_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l4_2">
+         <origin xyz="-0.0382873587873375 -0.00014584316995900666 0.08496664413200519" rpy="0.004010700334334073 0.013090340280633717 -0.01659313277704918"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l4_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l4_3">
+         <origin xyz="-0.04189456718172771 0.00014189306994862827 0.0847203638854035" rpy="-0.010277122881936726 0.012692293516228137 -0.017822125693994516"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l4_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l4_4">
+         <origin xyz="-0.03830757653746856 -2.744159015936289e-06 0.0856859562424311" rpy="-0.0009573563160008968 0.01089016112764063 -0.022390500651370354"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l4_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l4_5">
+         <origin xyz="-0.009125388575624945 0.0025506883345721436 0.19675889521166787" rpy="0.13172206302491007 0.06537159886885324 1.4709875635471028"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l4_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l4_6">
+         <origin xyz="0.0007641560707074759 0.008371501694226414 0.12936623894618854" rpy="-0.003680218260314727 0.09581506574497922 1.5546222491239794"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l4_6.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l4_7">
+         <origin xyz="0.0005165479057691535 -0.0027690120477894447 0.139519076410264" rpy="-0.003562819763644365 -0.03742855622845953 1.5721781900059046"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l4_7.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="right_j4_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="right_j4">
+      <parent link="right_l3"/>
+      <child link="right_j4_jointbody"/>
+      <origin xyz="0.0 -0.125 -0.1265" rpy="1.5707963267948963 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.9761" upper="2.9761" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="right_j4_offset">
+      <parent link="right_j4_jointbody"/>
+      <child link="right_l4"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="right_l5">
+      <inertial>
+         <origin xyz="0.0061133 -0.023697 0.076416" rpy="2.310218871776336 0.03535025036499406 0.08788740553711172"/>
+         <mass value="1.5625"/>
+         <inertia ixx="0.00474131" iyy="0.00422857" izz="0.00190672" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="l5_0">
+         <origin xyz="0.04532376747787981 -0.033569768329960024 0.08241508311216247" rpy="1.5707963267948966 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l5_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l5_1">
+         <origin xyz="-0.0050115323208768815 5.399343102930556e-06 0.00980440425620652" rpy="1.5841168119591913 -1.5680678848215925 -6.405986852087153e-14"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l5_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l5_2">
+         <origin xyz="0.009309677294353553 -0.006783003117802864 0.017361326674039796" rpy="0.03642378250814471 0.843760168422087 -0.5886277516050186"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l5_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l5_3">
+         <origin xyz="-0.00015255380725437564 -0.016654599470076324 0.07227076750125677" rpy="-0.027382768415166292 -0.7497318496224995 1.6597338317790293"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l5_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l5_4">
+         <origin xyz="0.0022548460156626973 0.009424086587676817 0.11999830860392607" rpy="0.15565130471111577 -1.044750875039523 1.430161073347589"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l5_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="right_j5_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="right_j5">
+      <parent link="right_l4"/>
+      <child link="right_j5_jointbody"/>
+      <origin xyz="0.0 0.031 0.275" rpy="-1.5707963267948957 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.9761" upper="2.9761" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="right_j5_offset">
+      <parent link="right_j5_jointbody"/>
+      <child link="right_l5"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="right_l6">
+      <inertial>
+         <origin xyz="-8.0726e-06 0.0085838 -0.0049566" rpy="-2.9692410364551334 -1.5116451595919178 -1.7282973111959166"/>
+         <mass value="0.3292"/>
+         <inertia ixx="0.000360268" iyy="0.000311078" izz="0.000214984" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="l6_0">
+         <origin xyz="-0.0036101202947732528 0.06668666911108767 -0.0009112397991989648" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l6_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l6_1">
+         <origin xyz="5.573860931968896e-06 0.06600775034145595 0.0006153716754702256" rpy="1.5666489335297709 -0.035387425559241015 1.5707963267948968"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l6_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l6_2">
+         <origin xyz="0.004251166119889984 0.06655087800740855 0.0012765833688194335" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l6_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l6_3">
+         <origin xyz="-1.032415329495246e-08 4.2891190813752054e-08 -0.036160395272127346" rpy="1.7069143936996707 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l6_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l6_4">
+         <origin xyz="9.632401883637048e-07 0.008206682093787294 -0.02898408419782671" rpy="3.1251387538096145 -1.5057561128234822 -1.5546869333220705"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l6_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="l6_5">
+         <origin xyz="-9.154856415232399e-06 0.010640062416810122 -0.006468773834806997" rpy="0.04026340825780084 -1.5281994242666206 1.529855990852348"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/sawyer/l6_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="right_j6_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="right_j6">
+      <parent link="right_l5"/>
+      <child link="right_j6_jointbody"/>
+      <origin xyz="0.0 -0.11 0.1053" rpy="-1.570796977607041 -0.17453006694042839 -3.141585214650501"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-4.7124" upper="4.7124" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="right_j6_offset">
+      <parent link="right_j6_jointbody"/>
+      <child link="right_l6"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <material name="white">
+      <color rgba="1 1 1 1"/>
+   </material>
+</robot>

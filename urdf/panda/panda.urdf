@@ -1,0 +1,656 @@
+<?xml version="1.0" ?>
+<robot name="panda">
+   <link name="world">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.0"/>
+         <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="link0">
+      <inertial>
+         <origin xyz="-0.041018 -0.00014 0.049974" rpy="2.9931847771355056 -1.4401460588374397 0.14998526383499944"/>
+         <mass value="0.629769"/>
+         <inertia ixx="0.004304650123430994" iyy="0.0038798390919025367" izz="0.0031305107846664564" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link0_0">
+         <origin xyz="-0.02434170827864863 0.06898584107657625 0.037001297313774606" rpy="0.880973363716189 -0.0009012197760431828 1.7310598119246745"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_1">
+         <origin xyz="-0.025005136793976982 0.07288967710097176 0.03697875321042992" rpy="2.3542244690660272 -0.06627609603911444 1.6549332552996283"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_2">
+         <origin xyz="-0.02374683403129674 -0.06535296272360118 0.06299932311266318" rpy="1.570400625854145 -0.00574301314133141 -0.1658989101581949"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_3">
+         <origin xyz="-0.02488420743263477 -0.07268133745438186 0.06293128746546782" rpy="0.8625312366532398 0.08519240253179539 1.2866321540389136"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_4">
+         <origin xyz="-0.06482117710661212 -0.06560424884993189 0.04800137992090077" rpy="0.030375863183620733 0.012032273331113785 1.4114311484698745"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_5">
+         <origin xyz="-0.05963885265197145 0.05788506811766412 0.03690848430709659" rpy="1.7514346619276953 0.0 1.7317833118277146"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_7">
+         <origin xyz="0.011052803835438744 -0.07200003137004433 0.046062701971281546" rpy="-0.12475356481072142 0.0026193383977184403 1.4119155812641373"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_7.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_8">
+         <origin xyz="-0.029952925627160853 -3.448017186102211e-05 0.05349454489239895" rpy="-0.0013455850606793884 -1.1356517229066097 -3.1380126798201555"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_8.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_9">
+         <origin xyz="-0.024999274401298205 -0.07303207273073183 0.032895042414244305" rpy="1.8630089058543375 -1.5551604165057409 -0.4334036807559073"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_9.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_10">
+         <origin xyz="-0.023787200255619093 -0.06548630800088073 0.03297410449192426" rpy="1.545559739370406 -0.011791349830911013 -0.15464279381434776"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_10.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_11">
+         <origin xyz="0.011042833195986071 0.07199695886119808 0.046087441451277696" rpy="-0.12477058126482465 -0.0025225701136615264 1.73149025707691"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_11.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link0_c">
+         <origin xyz="-0.029189765433072147 -0.0008794649788944781 0.0566031915141631" rpy="0.07341050648529257 -1.1999954549116756 3.0813768508296935"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link0_c.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="world2link0_fixed_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="world2link0_fixed">
+      <parent link="world"/>
+      <child link="world2link0_fixed_jointbody"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="world2link0_fixed_offset">
+      <parent link="world2link0_fixed_jointbody"/>
+      <child link="link0"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link1">
+      <inertial>
+         <origin xyz="0.003875 0.002081 -0.04762" rpy="-0.009398424463752386 -0.027576527378002424 1.5581062750829506"/>
+         <mass value="4.970684"/>
+         <inertia ixx="0.7071370144883009" iyy="0.7034354292338564" izz="0.00852455627784294" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link1">
+         <origin xyz="2.2415553023489027e-06 -0.0324793865141835 -0.06757586693056468" rpy="0.38337043294216616 0.0001406289803520533 -0.0003788308259348727"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link1_c">
+         <origin xyz="1.139898131675401e-05 -0.03126552803743275 -0.06937330598619522" rpy="0.3507575596779383 -0.00032182734340535646 0.0006491282822314315"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link1_c.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint1_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint1">
+      <parent link="link0"/>
+      <child link="joint1_jointbody"/>
+      <origin xyz="0.0 0.0 0.333" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.8973" upper="2.8973" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint1_offset">
+      <parent link="joint1_jointbody"/>
+      <child link="link1"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link2">
+      <inertial>
+         <origin xyz="-0.003141 -0.02872 0.003495" rpy="-2.351445390606804 -0.9617881563253395 -0.7229855148468698"/>
+         <mass value="0.646926"/>
+         <inertia ixx="0.03103264256517663" iyy="0.02830010693683385" izz="0.0027342504979895274" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link2">
+         <origin xyz="3.082552814544877e-06 -0.0686027528932163 0.03220972991497953" rpy="1.9510754572522944 -0.0003910639464024257 -0.0001327986982335716"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link2_c">
+         <origin xyz="-1.3176553398219796e-05 -0.07032155252075616 0.031178239145109848" rpy="1.9167766250212854 3.8633865331982875e-05 -0.00017520097652501398"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link2_c.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint2_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint2">
+      <parent link="link1"/>
+      <child link="joint2_jointbody"/>
+      <origin xyz="0.0 0.0 0.0" rpy="-1.5707963267948957 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-1.7628" upper="1.7628" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint2_offset">
+      <parent link="joint2_jointbody"/>
+      <child link="link2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link3">
+      <inertial>
+         <origin xyz="0.027518 0.039252 -0.066502" rpy="0.3778501466112161 0.35082398169136897 1.700415077209322"/>
+         <mass value="3.228604"/>
+         <inertia ixx="0.04150138828861061" iyy="0.041479257270665607" izz="0.0012463544407238245" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link3_0">
+         <origin xyz="0.041640068238247625 0.02444145064489676 -0.03727492899749336" rpy="0.5706582651359984 -0.7242337013714822 2.9041155029297663"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link3_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link3_1">
+         <origin xyz="0.021553479391113937 -0.011223170495539583 -0.011548319295510683" rpy="-3.120213348556372 -1.0597565825250004 -1.4907529125912147"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link3_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link3_2">
+         <origin xyz="0.05687671258214232 -0.011394921134909891 -0.061174465035796516" rpy="0.001435371332802804 -0.007864445829217637 2.35018648336946"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link3_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link3_3">
+         <origin xyz="0.0774911722691585 0.07963346976350043 -0.004022888793941207" rpy="0.9103807155185194 0.053157500438791194 1.6361659571787897"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link3_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link3_c">
+         <origin xyz="0.04434830616977217 0.02492832585533832 -0.038129984535498415" rpy="0.626428153968636 -0.648912402886591 2.7888150643653695"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link3_c.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint3_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint3">
+      <parent link="link2"/>
+      <child link="joint3_jointbody"/>
+      <origin xyz="0.0 -0.316 0.0" rpy="1.5707963267948963 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.8973" upper="2.8973" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint3_offset">
+      <parent link="joint3_jointbody"/>
+      <child link="link3"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link4">
+      <inertial>
+         <origin xyz="-0.05317 0.104419 0.027454" rpy="0.9491374145817448 -0.7651341090237642 0.9696855662634021"/>
+         <mass value="3.587895"/>
+         <inertia ixx="0.03495964042412706" iyy="0.028148276242039156" izz="0.010620083333833793" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link4_0">
+         <origin xyz="-0.025622488327255118 0.06118521662292073 -0.011393831419087433" rpy="-1.5781503842543603 -0.791264048531453 -3.129597040233699"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link4_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link4_1">
+         <origin xyz="-0.041551945541200064 0.0386938054188419 0.0240401850668444" rpy="1.1469171347861942 0.32720361122677777 0.6576570081488589"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link4_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link4_2">
+         <origin xyz="-0.005009009022661778 0.004010283391626417 0.07963447115932043" rpy="0.01728704864213415 -1.486693348601789 2.462376326505357"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link4_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link4_3">
+         <origin xyz="-0.060935694895702566 0.011544521319742486 -0.011228485394216723" rpy="-0.11249836460882134 -0.5091463835382632 1.6149866607207919"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link4_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link4_c">
+         <origin xyz="-0.038550294327056006 0.03952560974766748 0.024716241456280232" rpy="1.1575252530204931 0.36233734062035716 0.6286469250141417"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link4_c.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint4_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint4">
+      <parent link="link3"/>
+      <child link="joint4_jointbody"/>
+      <origin xyz="0.0825 0.0 0.0" rpy="1.5707963267948963 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.0718" upper="-0.0698" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint4_offset">
+      <parent link="joint4_jointbody"/>
+      <child link="link4"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link5">
+      <inertial>
+         <origin xyz="-0.011953 0.041065 -0.038437" rpy="-0.044814900263277224 0.13901987254385828 -0.28689982178911855"/>
+         <mass value="1.225946"/>
+         <inertia ixx="0.036762538266730406" iyy="0.028853091260661545" izz="0.008034370472607986" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link5_0">
+         <origin xyz="-0.00012909492629801462 0.09575388251980099 -0.032729627427273554" rpy="0.0021646835541119236 0.04994665119289898 1.567102784696114"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link5_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link5_1">
+         <origin xyz="-0.010146972443801154 0.10322721118137058 -0.11142128916989294" rpy="0.12574712873999883 0.1740382997721901 1.6920328910758133"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link5_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link5_2">
+         <origin xyz="-1.4686699630523936e-07 0.04425269920212681 -0.1112985359040258" rpy="-0.277000339204742 2.4900251497594894e-05 6.554603773703538e-05"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link5_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link5_c0">
+         <origin xyz="0.0009732588248875004 0.01992222155582667 -0.2091069569367147" rpy="-2.9667461948525857 -0.9061652263669018 -1.8724935166030865"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link5_c0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link5_c1">
+         <origin xyz="-0.00023507017418093157 0.08005924943045238 -0.1211534524078704" rpy="0.003785613762778528 0.24683558048800136 1.566413582373388"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link5_c1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link5_c2">
+         <origin xyz="0.00015025343019191157 0.06918297231373394 -0.0045388308900191476" rpy="1.1780917965966649 -0.005182717314899277 0.005207657314431291"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link5_c2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint5_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint5">
+      <parent link="link4"/>
+      <child link="joint5_jointbody"/>
+      <origin xyz="-0.0825 0.384 0.0" rpy="-1.5707963267948957 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.8973" upper="2.8973" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint5_offset">
+      <parent link="joint5_jointbody"/>
+      <child link="link5"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link6">
+      <inertial>
+         <origin xyz="0.060149 -0.014117 -0.010517" rpy="0.5130248250154139 -1.226242130979657 2.5246615081940447"/>
+         <mass value="1.666555"/>
+         <inertia ixx="0.005842761226567758" iyy="0.004310373704197247" izz="0.001597865069234999" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link6_0">
+         <origin xyz="0.02538686447802162 -0.015517999517566645 -0.005139967609184323" rpy="0.16938182569949167 -1.5174186885981678 2.459071962290328"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_1">
+         <origin xyz="9.689128832379959e-05 0.0014892221633303964 0.052967305243251064" rpy="-1.7817827520867562 -1.469193019363885 -3.137555930389527"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_2">
+         <origin xyz="0.10335279374141482 0.06819413403472291 -0.0005820739711053017" rpy="1.4199871988638346 -0.00991189976398843 1.3432543848060097"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_3">
+         <origin xyz="0.08820547902869498 0.07772552742710913 -0.010604832221086087" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_4">
+         <origin xyz="0.09866820805357215 0.07588488001934049 -3.81838160576121e-06" rpy="1.5707963267948966 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_5">
+         <origin xyz="0.08820306922578453 0.07772792027195963 0.010619455932352537" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_6">
+         <origin xyz="0.07775599126433871 0.07956951222410712 -2.4452554468482235e-06" rpy="1.5707963267948966 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_6.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_7">
+         <origin xyz="0.06338933259232485 0.08160700790590893 -1.3937560629892504e-07" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_7.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_8">
+         <origin xyz="0.11443524703111396 0.07093671511705132 -1.2390757832945407e-06" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_8.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_9">
+         <origin xyz="-0.0007293920031106048 -0.00010126877906188475 0.05253737664613466" rpy="-0.012449674714164694 -1.4689421759503425 3.141592653589792"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_9.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_10">
+         <origin xyz="0.09152592175245416 0.0757530570043529 -6.295970548351355e-05" rpy="1.6008551676500014 -0.0005903012823613718 1.3515726366307061"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_10.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_11">
+         <origin xyz="0.08805238798691446 0.07680706807855985 -1.2221260829161016e-05" rpy="0.0 0.0 1.3960084451673758"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_11.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_12">
+         <origin xyz="0.08830262427138909 0.07748927077959734 -0.024865583303171047" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_12.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_13">
+         <origin xyz="0.08817030186691406 0.07745552562261102 0.025032424929417766" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_13.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_14">
+         <origin xyz="0.007414994534614738 0.00012494443217778557 0.04372135866398126" rpy="0.028641362656910196 -1.4710580780940545 3.124202338178222"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_14.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_15">
+         <origin xyz="0.08954532269660534 0.07420171067115874 -2.5736658022989506e-05" rpy="1.545020808617562 5.602602767806886e-05 1.3505365066848027"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_15.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_16">
+         <origin xyz="0.058400500168428585 0.0035178914667928943 0.008369866685103824" rpy="2.9469650358345403 -1.3099440708155625 0.18028473465261263"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_16.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link6_c">
+         <origin xyz="0.05100229436563991 0.00693267296652053 0.006168993350723507" rpy="-3.0615998737983503 -1.4277689715854656 0.048520706407402026"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link6_c.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint6_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint6">
+      <parent link="link5"/>
+      <child link="joint6_jointbody"/>
+      <origin xyz="0.0 0.0 0.0" rpy="1.5707963267948963 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-0.0175" upper="3.7525" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint6_offset">
+      <parent link="joint6_jointbody"/>
+      <child link="link6"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link7">
+      <inertial>
+         <origin xyz="0.010517 -0.004252 0.061597" rpy="-0.16143881793285997 0.13793462387520372 -0.11924774686192664"/>
+         <mass value="0.735522"/>
+         <inertia ixx="0.012734492874724473" iyy="0.01010547714435622" izz="0.004518029980919309" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link7_0">
+         <origin xyz="0.0417779426692942 0.04183594153686578 0.08217258109746292" rpy="-1.5847380549916703 -1.3546061346436344 -2.3566710587689474"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link7_1">
+         <origin xyz="0.06381389846298816 0.017703890911316744 0.08298637529119146" rpy="1.8028623083017221 0.00204124247127746 -0.7013431721034276"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link7_2">
+         <origin xyz="-0.03175903413233844 -0.03176074799868773 0.08578121033420426" rpy="-1.6960048566709056 -1.4537424549146334 2.4810845843512017"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link7_3">
+         <origin xyz="-0.03695030723409938 -0.03694226974833503 0.08580172086500923" rpy="0.0 0.0 0.785109248980203"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link7_4">
+         <origin xyz="-0.03770673339557498 -0.0377089860787648 0.08578035625964707" rpy="0.0 0.0 0.7851522524329011"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link7_5">
+         <origin xyz="0.017698489516545266 0.0638384990368043 0.08295575737681099" rpy="1.3374821199933173 0.0024362159157849117 2.271496449874789"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link7_6">
+         <origin xyz="0.041159655074071815 0.04120412941972867 0.06775823859611065" rpy="-1.575019937447098 -1.2906385873622823 -2.352616845843026"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_6.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link7_7">
+         <origin xyz="1.216750754237956e-06 4.2939759647026276e-05 0.07774802576613041" rpy="-1.6481695820319127 -1.5676263444402883 -1.495812317959907"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_7.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link7_c">
+         <origin xyz="0.010361372115882629 0.010359603871236887 0.07910777287138845" rpy="3.138032285623005 -1.5171405401134985 -2.3520385516245224"/>
+         <geometry>
+            <mesh filename="package://serial_link_velocity_control/urdf/panda/link7_c.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint7_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint7">
+      <parent link="link6"/>
+      <child link="joint7_jointbody"/>
+      <origin xyz="0.088 0.0 0.0" rpy="1.5707963267948963 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.8973" upper="2.8973" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint7_offset">
+      <parent link="joint7_jointbody"/>
+      <child link="link7"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="attachment">
+      <inertial>
+         <origin xyz="0.0 0.0 0.107" rpy="0.0 0.0 2.3561945251121728"/>
+         <mass value="0.0"/>
+         <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="link72attachment_fixed_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="link72attachment_fixed">
+      <parent link="link7"/>
+      <child link="link72attachment_fixed_jointbody"/>
+      <origin xyz="0.0 0.0 0.107" rpy="0.0 0.0 2.3561945251121728"/>
+   </joint>
+   <joint type="fixed" name="link72attachment_fixed_offset">
+      <parent link="link72attachment_fixed_jointbody"/>
+      <child link="attachment"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <material name="white">
+      <color rgba="1 1 1 1"/>
+   </material>
+</robot>
