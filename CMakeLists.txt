@@ -1,34 +1,52 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.8)
+project(serial_link_velocity_control)
 
-project(software_template
-        DESCRIPTION "This is a template for software projects."
-        LANGUAGES CXX
-        VERSION 1.0)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Set default build type to Release if not specified
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build (Debug, Release, RelWithDebInfo, MinSizeRel)" FORCE)
+# Compiler options for GCC and Clang
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
-
 ####################################################################################################
-#                                          REQUIREMENTS                                            #
+#                                          DEPENDENCIES                                            #
 ####################################################################################################
+# ROS2 packages:
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(serial_link_action_client REQUIRED)
+find_package(serial_link_action_server REQUIRED)
+find_package(serial_link_interfaces REQUIRED)
+find_package(std_msgs REQUIRED)
 
-# Packages
-# find_package(name REQUIRED)
-
-# Location of header files
-include_directories(include)
-# include_directories(${NAME_INCLUDE_DIR})
 
 ####################################################################################################
 #                                           EXECUTABLES                                            #
 ####################################################################################################
+# Joint command relay
+add_executable(joint_command_relay src/joint_command_relay.cpp)
 
-# Haiku
-add_executable(haiku src/nodes/haiku_node.cpp
-                     src/haiku.cpp)
+ament_target_dependencies(joint_command_relay "ament_cmake"
+                                              "rclcpp"
+                                              "serial_link_interfaces"
+                                              "std_msgs")                                              
 
-# target_link_libraries(haiku PRIVATE Library::Library)
+
+####################################################################################################
+#                                          INSTALLATION                                            #
+####################################################################################################
+# Install executables
+install(TARGETS joint_command_relay
+        DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install folders so ROS2 can find relevant files
+install(DIRECTORY launch
+                  config
+                  urdf
+                  rviz
+        DESTINATION share/${PROJECT_NAME}
+)
+
+ament_package()

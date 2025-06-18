@@ -1,0 +1,28 @@
+/**:
+    ros__parameters:
+
+        # These are for the RobotLibrary::Control class(es):
+        cartesian_damping: [10.0,  0.0,  0.0, 0.0, 0.0, 0.0,
+                             0.0, 10.0,  0.0, 0.0, 0.0, 0.0,
+                             0.0,  0.0, 10.0, 0.0, 0.0, 0.0,
+                             0.0,  0.0,  0.0, 1.0, 0.0, 0.0,
+                             0.0,  0.0,  0.0, 0.0, 1.0, 0.0,
+                             0.0,  0.0,  0.0, 0.0, 0.0, 1.0]
+
+        cartesian_stiffness: [200.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                0.0, 200.0,   0.0,   0.0,   0.0,   0.0,
+                                0.0,   0.0, 200.0,   0.0,   0.0,   0.0,
+                                0.0,   0.0,   0.0, 100.0,   0.0,   0.0,
+                                0.0,   0.0,   0.0,   0.0, 100.0,   0.0,
+                                0.0,   0.0,   0.0,   0.0,   0.0, 100.0]
+        frequency: 500.0
+        joint_position_gain: 20.0
+        joint_velocity_gain:  5.0
+        manipulability_threshold: 0.001
+        max_joint_acceleration: 10.0
+
+        # This is for the underlying QPSolver class:
+        initial_barrier_scalar: 500.0
+        barrier_reduction_rate: 0.001
+        step_size_tolerance: 0.05
+        max_steps: 10

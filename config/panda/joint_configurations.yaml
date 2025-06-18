@@ -1,0 +1,15 @@
+/**:
+  ros__parameters:
+    number_of_joints: 7                                                         # We need this to split up the position arrays
+    joint_config_names: ["home", "ready", "multi"]                              # We need to declare them here so we can search them by name
+    home:
+        positions: [0.0, 0.0, 0.0, -0.0698, 0.0, -0.0175, 0.0]
+        times: [5.0]
+    ready:
+        positions: [-2.65, -1.64, 0.89, -1.77, 1.50, 0.90, -0.50]
+        times: [5.0]
+    multi:
+        positions: [0.695, 0.582, 0.145, -1.77, -0.087, 2.34, 0.00,
+                   -2.65, -1.64, 0.89, -1.77, 1.50, 0.90, -0.50,
+                    0.000, 0.000, 0.000,  0.00,  0.000, 0.00, 0.00]
+        times: [4.0, 8.0, 12.0]
