@@ -7,6 +7,13 @@ This repository contains a ROS2 package with various configuration & launch file
 - The Rethink Robotics Sawyer, and
 - The Universal Robot UR10.
 
+<p align="center"/>
+  <img src="/doc/kuka.gif" width="200" height="auto"/>
+  <img src="/doc/panda.gif" width="200" height="auto"/>
+  <img src="/doc/sawyer.gif" width="200" height="auto"/>
+  <img src="/doc/ur10e.gif" width="200" height="auto"/>
+</p>
+
 It uses the [serial_link_action_client](https://github.com/Woolfrey/client_serial_link) to send goals to the [serial_link_action_server](https://github.com/Woolfrey/server_serial_link). The latter implements [RobotLibrary](https://github.com/Woolfrey/software_robot_library) for the real-time control algorithms. It is designed to interact with the [mujoco_ros2](https://github.com/Woolfrey/mujoco_ros2) package for simulation, but you can easily swap this out for a real robot provided you establish the correct communication channels.
 
 This package primarily serves as an example of how to implement the [serial_link_action_client](https://github.com/Woolfrey/client_serial_link) and [serial_link_action_server](https://github.com/Woolfrey/server_serial_link) packages to control a robot arm. You can fork it, and modify it, to get it running for any other robot arm, provided you have a valid URDF 🦾
@@ -74,13 +81,13 @@ workspace/
 
 Inside the `config/` directory are all the configuration files to change parameters & performance of the controller.
 
-| Directory | File | Description |
-|-----------|------|-------------|
-| `config/` |`control_parameters.yaml` | Contains variables like feedback gains, control frequency, and parameters for the QP solver. |
-|           |`tolerances.yaml` | Contains maximum permissable errors in position, velocity tracking. The action servers will abort when violated. |
-|           | `wii_nunchuck.yaml` | Used by the `follow_twist` action. It specifies button mapping for manually controlling the speed of the endpoint. |
-| `<robot_model>/` | `endpoint_poses.yaml` | Pre-defined Cartesian poses that can be used to generate Cartesian trajectories, and are called by name in the client. |
-|                  | `joint_configurations.yaml` | Pre-defined joint positions use for moving the robot between different configurations. They are called by name in the client. |
+| File | Description |
+|------|-------------|
+| `config/control_parameters.yaml` | Contains variables like feedback gains, control frequency, and parameters for the QP solver. |
+| `config/tolerances.yaml` | Contains maximum permissable errors in position, velocity tracking. The action servers will abort when violated. |
+| `config/wii_nunchuck.yaml` | Used by the `follow_twist` action. It specifies button mapping for manually controlling the speed of the endpoint. |
+| `config/<robot_model>/endpoint_poses.yaml` | Pre-defined Cartesian poses that can be used to generate Cartesian trajectories, and are called by name in the client. |
+| `config/<robot_model>/joint_configurations.yaml` | Pre-defined joint positions use for moving the robot between different configurations. They are called by name in the client. |
 
 You can play around with them and see how they work.
 
