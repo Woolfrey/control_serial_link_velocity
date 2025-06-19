@@ -8,10 +8,10 @@ This repository contains a ROS2 package with various configuration & launch file
 - The Universal Robot UR10.
 
 <p align="center"/>
-  <img src="/doc/kuka.gif" width="200" height="auto"/>
-  <img src="/doc/panda.gif" width="200" height="auto"/>
-  <img src="/doc/sawyer.gif" width="200" height="auto"/>
-  <img src="/doc/ur10e.gif" width="200" height="auto"/>
+  <img src="/doc/kuka.gif" width="150" height="auto"/>
+  <img src="/doc/panda.gif" width="150" height="auto"/>
+  <img src="/doc/sawyer.gif" width="150" height="auto"/>
+  <img src="/doc/ur10e.gif" width="150" height="auto"/>
 </p>
 
 It uses the [serial_link_action_client](https://github.com/Woolfrey/client_serial_link) to send goals to the [serial_link_action_server](https://github.com/Woolfrey/server_serial_link). The latter implements [RobotLibrary](https://github.com/Woolfrey/software_robot_library) for the real-time control algorithms. It is designed to interact with the [mujoco_ros2](https://github.com/Woolfrey/mujoco_ros2) package for simulation, but you can easily swap this out for a real robot provided you establish the correct communication channels.
@@ -112,9 +112,7 @@ There are 3 bash script you can run. From the `control_serial_link_velocity/` di
 The client will launch in your current terminal. Another terminal will open up for the action server.
 
 <p align="center">
-  <img src="doc/client_and_server.png" width="600" height="auto" loading="lazy" />
-  <br>
-  <em> Running the bash scripts will launch the client, and action server in a separate terminal. </em>
+  <img src="doc/bash_script_launch.png" width="600" height="auto" loading="lazy" />
 </p>
 
 ### mujoco.py
@@ -192,7 +190,7 @@ This will start up the clients & servers for both joint & Cartesian velocity con
 Type `options` to see what is available.
 
 <p align="center">
-  <img src="doc/track_trajectory.gif" width="600" height="auto"/>
+  <img src="doc/trajectory_tracking.gif" width="600" height="auto"/>
 </p>
 
 [:top: Back to Top.](#top)
